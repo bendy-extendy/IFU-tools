@@ -27,7 +27,7 @@ combined spectrum from these pixels.
 
 ### Usage
 
-Simple example:
+#### Simple example:
 
 ``` python
 from pick-and-extract import SpecExtractor
@@ -43,5 +43,7 @@ extracts and coadds a spectrum from the selected pixels.
 
 This spectrum can then be accessed by using the method
 `specselector.save_spectrum("/path/to/outputfile")`. 
+
+![./pictures/simple_screenshot.png]("Screenshot of selection window.")
 
 
