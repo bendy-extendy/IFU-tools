@@ -44,5 +44,5 @@ extracts and coadds a spectrum from the selected pixels.
 This spectrum can then be accessed by using the method
 `specselector.save_spectrum("/path/to/outputfile")`. 
 
-![Screenshot of selection window.](pictures/simple_screenshot.png "Screenshot")
+![Screenshot of selection window.](pictures/simple_screenshot.png "Screenshot" | width=150px)
 
