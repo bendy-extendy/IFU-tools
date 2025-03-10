@@ -30,7 +30,7 @@ The class is in the file `pick-and-extract.py`, and a simple example of
 use is: 
 
 ``` python
-from pick-and-extract import SpecExtractor
+from pick_and_extract import SpecExtractor
 
 ex = SpecExtractor("/path/to/ifu/cube.fits")
 ```
