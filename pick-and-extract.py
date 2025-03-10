@@ -145,12 +145,18 @@ class SpecExtractor(object):
                 self.restwave, self.oned_errs, color="0.8", step="mid")
             checkfig.show()
 
-    def save_spectrum(self, filepath="output.ecsv", savefmt="ascii.ecsv"):
+    def get_spectrum(self):
+        """ Returns the latest extracted spectrum.
+        Returns :: Astropy.table.Table 
+        """
         outspec = Table(
             [self.obswave, self.restwave, self.oned_spec, self.oned_errs],
             names=["obswave", "restwave", "fnu", "dfnu"],)
-        outspec.write(filepath, format=savefmt)
         return outspec
+
+    def save_spectrum(self, filepath="output.ecsv", savefmt="ascii.ecsv"):
+        outspec = self.get_spectrum()
+        outspec.write(filepath, format=savefmt)
 
 
 def extract_spectrum(datacube, errorcube, mask):

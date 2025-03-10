@@ -41,8 +41,13 @@ individual pixels with a simple mouse click. The `Reset` butten does what it
 says: Clears the selection. When happy with the selection, the `OK` button
 extracts and coadds a spectrum from the selected pixels. 
 
-This spectrum can then be accessed by using the method
-`specselector.save_spectrum("/path/to/outputfile")`. 
-
 <img src="pictures/simple_screenshot.png" width=50% alt="Screenshot of selection window"> 
 
+
+#### Accessing and saving the extracted spectrum
+
+This spectrum can then be accessed by using the method
+`SpecExtractor.get_spectrum()`, which will return the latest extracted spectrum
+as an `astropy.table.Table`; and it can be conveniently saved calling
+`specselector.save_spectrum("/path/to/outputfile")` (or just using the usual
+`write()` method of the astropy Table).
