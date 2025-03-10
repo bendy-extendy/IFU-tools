@@ -32,7 +32,7 @@ combined spectrum from these pixels.
 ``` python
 from pick-and-extract import SpecExtractor
 
-specslector = SpecExtractor("/path/to/ifu/cube.fits")
+ex = SpecExtractor("/path/to/ifu/cube.fits")
 ```
 
 Now, a Matplotlib plot window should show up showing a median image of the
@@ -46,8 +46,13 @@ extracts and coadds a spectrum from the selected pixels.
 
 #### Accessing and saving the extracted spectrum
 
-This spectrum can then be accessed by using the method
-`SpecExtractor.get_spectrum()`, which will return the latest extracted spectrum
-as an `astropy.table.Table`; and it can be conveniently saved calling
-`specselector.save_spectrum("/path/to/outputfile")` (or just using the usual
-`write()` method of the astropy Table).
+This spectrum can then be accessed by using the method `ex.get_spectrum()`,
+which will return the latest extracted spectrum as an `astropy.table.Table`; and
+it can be conveniently saved calling `ex.save_spectrum("/path/to/outputfile")`
+(or just using the usual `write()` method of the astropy Table).
+
+
+#### More options
+
+**TODO**: Make more detailed description of kwargs.
+
